@@ -61,13 +61,12 @@ form.addEventListener('submit', function(e){
   const valEmail = formulaire.emailName.element.value;
   const valBirthday = formulaire.birthdayName.element.value;
   const valNumber = formulaire.numberName.element.value;
-
-
-  if(!controleText(valPrenom)){
+console.log(formulaire.numberName.element.value)
+  /*if(!controleText(valPrenom)){
     formulaire.firsName.error.innerHTML='Le prénom est incorrect !'
 }else{
     formulaire.firsName.error.innerHTML=''
-}
+}*/
 if(!controleText(valNom)){
     formulaire.lastName.error.innerHTML='Le nom est incorrect !'
 }else{
@@ -89,9 +88,10 @@ if(!controleNumber(valNumber)){
   formulaire.numberName.error.innerHTML=''
 }
 
+
 });
 function controleText(toto){
-  const regex= new RegExp('^[A-Za-z.-_]{2,20}$');
+  const regex= new RegExp("^[A-Za-z.\\-\\_]{2,20}$");
   return regex.test(toto)
 }
 /*function controleText(valNom){
@@ -108,10 +108,30 @@ function controleBirthday(valBirthday){
 
 }
 function controleNumber(valNumber){
-  const numbersValue = ('/[0-9]/');
+  const numbersValue = new RegExp('^[0-9]{1,2}$');
   return numbersValue.test(valNumber)
 
 }
 modalBtnClose.addEventListener("click", function() {          
   modalbg.style.display = "none";                             
 });
+
+function init(){
+  const valPrenom = formulaire.firsName.element.value;
+
+  valPrenom.addEventListener("blur", function(event) {
+    if(!controleText(valPrenom)){
+      event.formulaire.firsName.error.innerHTML='Le prénom est incorrect !'
+  }else{
+      event.formulaire.firsName.error.innerHTML=''
+  }
+  });
+}
+
+/* faire apparaitre l'erreur sans faire entrer 
+brancher sur chaque element un evenement change(e)
+e.target.value -fonction init
+
+evenement blur 
+
+*/
