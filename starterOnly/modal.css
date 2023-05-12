@@ -67,7 +67,7 @@ img {
 .topnav .icon {
   display: none;
 }
-.error_first, .error_last, .error_email, .error_birthday, .error_number{color: red; font-size: 16px;}
+.error_first, .error_last, .error_email, .error_birthday, .error_number, .error_location{color: red; font-size: 16px;}
 
 @media screen and (max-width: 768px) {
   .topnav a {display: none;}
