@@ -56,6 +56,7 @@ img {
   background-color: #ff0000;
   color: #ffffff;
   border-radius: 15px;
+  text-decoration: underline;
 }
 
 .topnav a.active {
@@ -67,7 +68,7 @@ img {
 .topnav .icon {
   display: none;
 }
-.error_first, .error_last, .error_email, .error_birthday, .error_number, .error_location{color: red; font-size: 16px;}
+.error_first, .error_last, .error_email, .error_birthday, .error_number, .error_location, .error_condition{color: red; font-size: 16px;}
 
 @media screen and (max-width: 768px) {
   .topnav a {display: none;}
@@ -486,6 +487,7 @@ footer {
   padding-right: 2vw;
   margin: 0 20px;
 }
+.formConfirmation{display: none;}
 @media screen and (max-width: 800px) {
   .hero-section {
     display: block;
@@ -503,13 +505,15 @@ footer {
     display: none;
   }
   .hero-headline {
-    font-size: 4.5rem;
+    line-height: 52px;
+      font-size: 40px;
     white-space: normal;
   }
   .hero-headline br{display: none;}
   .hero-text {
     width: unset;
-    font-size: 1.5rem;
+    font-size: 13px;
+    margin-top: 20px;
   }
   .hero-img img {
     border-radius: 10px;
