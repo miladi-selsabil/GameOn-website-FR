@@ -17,7 +17,7 @@ body {
   background-image: url("background.png");
   font-family: var(--font-default);
   font-size: 18px;
-  max-width: 1300px;
+  max-width: 97%;
   margin: 0 auto;
 }
 
@@ -71,6 +71,13 @@ img {
 .error_first, .error_last, .error_email, .error_birthday, .error_number, .error_location, .error_condition{color: red; font-size: 16px;}
 
 @media screen and (max-width: 768px) {
+  .content{top:27px;}
+  .topnav{position: fixed;
+    width: 100%;
+    background-color: white;
+    z-index: 4;
+    margin: 0;
+    padding-left: 28px;}
   .topnav a {display: none;}
   .topnav a.icon {
     float: right;
@@ -78,10 +85,10 @@ img {
     display: block;
   }
   .main-navbar{
-    z-index: 1;
-    right: 0px;
+    z-index: 2;
+    right: 15px;
     position: fixed;
-    top: 0px;
+    top: 2px;
   }
 }
 
@@ -106,7 +113,6 @@ img {
   .topnav a.icon {
     float: right;
     display: block;
-    margin-top: -15px;
   }
 } 
 
@@ -169,13 +175,13 @@ main {
 .bground {
   display: none;
   position: fixed;
-  z-index: 1;
+  z-index: 3;
   left: 0;
   top: 0;
   height: 100%;
   width: 100%;
   overflow: auto;
-  background-color: rgba(26, 39, 156, 0.4);
+  background-color: #fff;
 }
 
 .content {
@@ -330,6 +336,19 @@ input[data-error]::after {
 .close:after {
   transform: rotate(-45deg);
 }
+.btn-close{
+    background: #fe142f;
+    margin-top: 80%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 7px;
+    font-size: 1rem;
+    color: #fff;
+    text-align: center;
+    cursor: pointer;
+    border: 0;
+}
 .btn-submit,
 .btn-signup {
   background: #fe142f;
@@ -450,7 +469,7 @@ input[data-error]::after {
   white-space: nowrap;
 }
 .hero-text {
-  width: 146%;
+  width: 138%;
   font-weight: normal;
   margin-top: 57px;
   padding: 0;
@@ -487,8 +506,16 @@ footer {
   padding-right: 2vw;
   margin: 0 20px;
 }
-.formConfirmation{display: none;}
+.formConfirmation{
+    display: none;
+    margin: 10% auto;
+    width: 100%;
+    text-align: center;}
 @media screen and (max-width: 800px) {
+  .topnav.responsive .main-navbar {
+      border: 2px #818181 solid;
+      background: #fff;
+    }
   .hero-section {
     display: block;
     box-shadow: unset;
@@ -496,7 +523,9 @@ footer {
   .hero-content {
     background: #fff;
     color: #000;
-    padding: 20px;
+    padding: 20px 0px;
+    min-width: 0px;
+    
   }
   .hero-content::after {
     content: unset;
@@ -508,6 +537,8 @@ footer {
     line-height: 52px;
       font-size: 40px;
     white-space: normal;
+    margin-top: 35px;
+        font-weight: 600;
   }
   .hero-headline br{display: none;}
   .hero-text {
@@ -515,9 +546,15 @@ footer {
     font-size: 13px;
     margin-top: 20px;
   }
+    .header-logo img {
+      height: 24px;
+      width: 132px;
+      box-sizing: content-box;
+      margin: 15px 0 15px 0;
+    }
   .hero-img img {
     border-radius: 10px;
-    margin-top: 40px;
+    margin-top: 30px;
   }
   .hero-section > .btn-signup {
     display: block;
