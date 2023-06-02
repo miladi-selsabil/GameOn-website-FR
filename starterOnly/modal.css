@@ -84,6 +84,10 @@ img {
     color: red;
     display: block;
   }
+    .topnav a.icon:hover {
+      color: white;
+   
+    }
   .main-navbar{
     z-index: 2;
     right: 15px;
@@ -515,6 +519,7 @@ footer {
   .topnav.responsive .main-navbar {
       border: 2px #818181 solid;
       background: #fff;
+      padding: 0px 55px;
     }
   .hero-section {
     display: block;
