@@ -1,4 +1,4 @@
-![GameOn](/Logo.png)
+![GameOn](/starterOnly/Logo.png)
 
 # GameOn 🎮👾
 
